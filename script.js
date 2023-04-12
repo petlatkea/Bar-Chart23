@@ -7,11 +7,17 @@ const data = [16, 30, 3, 29, 8, 18, 26, 5, 1, 31, 23, 6, 25, 17, 2, 10, 11, 20, 
 function start() {
   console.log("JavaScript kører");
   
+  displayData();
+}
+
+function displayData() {
   const bars = document.querySelectorAll(".bar");
 
-  const firstBar = bars[0];
+  for(let i=0; i<40; i++) {
+    const currentBar = bars[i];
+    const h = data[i] / 32 * 100;
 
-  const h = data[0] / 32 * 100;
+    currentBar.style.height = `${h}px`;
+  }
 
-  firstBar.style.height = `${h}px`;
 }
