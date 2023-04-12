@@ -11,7 +11,7 @@ function start() {
 
   const firstBar = bars[0];
 
-  const h = 50;
+  const h = data[0] / 32 * 100;
 
   firstBar.style.height = `${h}px`;
 }
